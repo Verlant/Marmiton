@@ -1,0 +1,167 @@
+.container {
+  width: 380px;
+  height: 450px;
+  background-color: #e8e8e8;
+  border: 0 none currentColor;
+  border-radius: 50px 50px 50px 50px;
+  box-shadow: 2px 5px 5px #e8e8e8, -2px 5px 5px #e8e8e8;
+  position: relative;
+  top: auto;
+  right: auto;
+  bottom: auto;
+  left: auto;
+  z-index: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 25px;
+}
+.container .recette_jour {
+  width: 150px;
+  height: 40px;
+  background-color: white;
+  border: 0 none currentColor;
+  border-radius: 50px 0px 0px 50px;
+  position: absolute;
+  top: 10%;
+  right: 0;
+  bottom: auto;
+  left: auto;
+  z-index: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.3rem;
+  color: #ff6f61;
+  font-style: normal;
+  font-weight: normal;
+}
+.container .recette_nom {
+  width: 100%;
+  height: 100px;
+  background-color: white;
+  border: 0 none currentColor;
+  border-radius: 25px 25px 50px 50px;
+  position: absolute;
+  top: auto;
+  right: auto;
+  bottom: 0;
+  left: auto;
+  z-index: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.75rem;
+  color: #3f3735;
+  font-style: normal;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.container .recette_bloc {
+  width: 380px;
+  height: 20px;
+  background-color: white;
+  position: absolute;
+  top: auto;
+  right: auto;
+  bottom: 22%;
+  left: auto;
+  z-index: auto;
+}
+.container .recette_coeur-container {
+  width: 80px;
+  height: 45px;
+  background-color: white;
+  border: 0 none currentColor;
+  border-radius: 50px 50px 0px 0px;
+  position: relative;
+  top: auto;
+  right: auto;
+  bottom: auto;
+  left: auto;
+  z-index: 1;
+  align-self: flex-end;
+  margin-bottom: 100px;
+}
+.container .recette_coeur {
+  width: 25px;
+  height: 25px;
+  background-color: transparent;
+  border: 3px solid #ff6f61;
+  border-radius: 0px 0px 0px 0px;
+  border-left: none;
+  border-top: none;
+  position: absolute;
+  top: auto;
+  right: auto;
+  bottom: -20%;
+  left: 32.5%;
+  z-index: auto;
+  transform: rotate(45deg);
+}
+.container .recette_coeur::before {
+  content: "";
+  width: 14.5px;
+  height: 20px;
+  background-color: transparent;
+  border: 3px solid #ff6f61;
+  border-radius: 0px 25px 25px 0px;
+  border-left: none;
+  position: absolute;
+  top: -67%;
+  right: 4.82%;
+  bottom: auto;
+  left: auto;
+  z-index: auto;
+  transform: rotate(-90deg);
+}
+.container .recette_coeur::after {
+  content: "";
+  width: 14.5px;
+  height: 20px;
+  background-color: transparent;
+  border: 3px solid #ff6f61;
+  border-radius: 25px 0px 0px 25px;
+  border-right: none;
+  position: absolute;
+  top: auto;
+  right: auto;
+  bottom: -12%;
+  left: -50%;
+  z-index: auto;
+}
+.container .recette_coeur_left_bloc {
+  width: 155px;
+  height: 50px;
+  background-color: #e8e8e8;
+  position: absolute;
+  top: auto;
+  right: auto;
+  bottom: auto;
+  left: 0;
+  z-index: auto;
+  border: 0 none currentColor;
+  border-radius: 0px 0px 30px 0px;
+  align-self: flex-end;
+  margin-bottom: 99px;
+}
+.container .recette_coeur_right_bloc {
+  width: 155px;
+  height: 50px;
+  background-color: #e8e8e8;
+  position: absolute;
+  top: auto;
+  right: 0;
+  bottom: auto;
+  left: auto;
+  z-index: auto;
+  border: 0 none currentColor;
+  border-radius: 0px 0px 0px 30px;
+  align-self: flex-end;
+  margin-bottom: 99px;
+}
+
+/*# sourceMappingURL=style.css.map */

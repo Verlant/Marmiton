@@ -1,0 +1,158 @@
+@use "var";
+@use "mixin";
+
+.container {
+  @include mixin.figure(var.$width * 3.8, var.$height * 4.5, var.$bg_color);
+  @include mixin.border(
+    0,
+    none,
+    currentColor,
+    var.$radius * 50,
+    var.$radius * 50,
+    var.$radius * 50,
+    var.$radius * 50
+  );
+  @include mixin.shadow-box(2px, 5px, 5px, var.$bg_color);
+  // box-shadow: 5px 5px 5px var.$bg_color, -5px 5px 5px var.$bg_color;
+  @include mixin.position(relative, auto, auto, auto, auto, auto);
+  @include mixin.flex(row, center, center);
+  margin: 25px;
+  .recette {
+    &_jour {
+      @include mixin.figure(var.$width * 1.5, var.$height * 0.4, white);
+      @include mixin.border(
+        0,
+        none,
+        currentColor,
+        var.$radius * 50,
+        var.$radius * 0,
+        var.$radius * 0,
+        var.$radius * 50
+      );
+      @include mixin.position(absolute, 10%, 0, auto, auto, auto);
+      @include mixin.flex(row, center, center);
+      @include mixin.font(1.3rem, var.$primary_color, normal, normal);
+    }
+    &_nom {
+      @include mixin.figure(100%, var.$height, white);
+      @include mixin.border(
+        0,
+        none,
+        currentColor,
+        var.$radius * 25,
+        var.$radius * 25,
+        var.$radius * 50,
+        var.$radius * 50
+      );
+      // border-end-end-radius: none;
+      @include mixin.position(absolute, auto, auto, 0, auto, auto);
+      @include mixin.flex(row, center, center);
+      @include mixin.font(1.75rem, var.$text_color, normal, bold);
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    &_bloc {
+      @include mixin.figure(var.$width * 3.8, var.$height * 0.2, white);
+      @include mixin.position(absolute, auto, auto, 22%, auto, auto);
+    }
+    &_coeur-container {
+      @include mixin.figure(var.$width * 0.8, var.$height * 0.45, white);
+      @include mixin.border(
+        0,
+        none,
+        currentColor,
+        var.$radius * 50,
+        var.$radius * 50,
+        var.$radius * 0,
+        var.$radius * 0
+      );
+      @include mixin.position(relative, auto, auto, auto, auto, 1);
+      align-self: flex-end;
+      margin-bottom: 100px;
+    }
+    &_coeur {
+      @include mixin.figure(var.$width * 0.25, var.$height * 0.25, transparent);
+      @include mixin.border(
+        3px,
+        solid,
+        var.$primary_color,
+        var.$radius * 0,
+        var.$radius * 0,
+        var.$radius * 0,
+        var.$radius * 0
+      );
+      border-left: none;
+      border-top: none;
+      @include mixin.position(absolute, auto, auto, -20%, 32.5%, auto);
+      transform: rotate(45deg);
+    }
+    &_coeur::before {
+      content: "";
+      @include mixin.figure(var.$width * 0.145, var.$height * 0.2, transparent);
+      @include mixin.border(
+        3px,
+        solid,
+        var.$primary_color,
+        var.$radius * 0,
+        var.$radius * 25,
+        var.$radius * 25,
+        var.$radius * 0
+      );
+      border-left: none;
+      @include mixin.position(absolute, -67%, 4.82%, auto, auto, auto);
+      transform: rotate(-90deg);
+    }
+    &_coeur::after {
+      content: "";
+      @include mixin.figure(var.$width * 0.145, var.$height * 0.2, transparent);
+      @include mixin.border(
+        3px,
+        solid,
+        var.$primary_color,
+        var.$radius * 25,
+        var.$radius * 0,
+        var.$radius * 0,
+        var.$radius * 25
+      );
+      border-right: none;
+      @include mixin.position(absolute, auto, auto, -12%, -50%, auto);
+    }
+    &_coeur_left_bloc {
+      @include mixin.figure(
+        var.$width * 1.55,
+        var.$height * 0.5,
+        var.$bg_color
+      );
+      @include mixin.position(absolute, auto, auto, auto, 0, auto);
+      @include mixin.border(
+        0,
+        none,
+        currentColor,
+        var.$radius * 0,
+        var.$radius * 0,
+        var.$radius * 30,
+        var.$radius * 0
+      );
+      align-self: flex-end;
+      margin-bottom: 99px;
+    }
+    &_coeur_right_bloc {
+      @include mixin.figure(
+        var.$width * 1.55,
+        var.$height * 0.5,
+        var.$bg_color
+      );
+      @include mixin.position(absolute, auto, 0, auto, auto, auto);
+      @include mixin.border(
+        0,
+        none,
+        currentColor,
+        var.$radius * 0,
+        var.$radius * 0,
+        var.$radius * 0,
+        var.$radius * 30
+      );
+      align-self: flex-end;
+      margin-bottom: 99px;
+    }
+  }
+}
