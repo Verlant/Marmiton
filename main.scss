@@ -1,6 +1,8 @@
 @use "var";
 @use "mixin";
 
+@import url("https://fonts.cdnfonts.com/css/open-sans");
+
 .container {
   @include mixin.figure(var.$width * 3.8, var.$height * 4.5, var.$bg_color);
   @include mixin.border(
@@ -13,7 +15,6 @@
     var.$radius * 50
   );
   @include mixin.shadow-box(2px, 5px, 5px, var.$bg_color);
-  // box-shadow: 5px 5px 5px var.$bg_color, -5px 5px 5px var.$bg_color;
   @include mixin.position(relative, auto, auto, auto, auto, auto);
   @include mixin.flex(row, center, center);
   margin: 25px;
@@ -48,7 +49,7 @@
       @include mixin.position(absolute, auto, auto, 0, auto, auto);
       @include mixin.flex(row, center, center);
       @include mixin.font(1.75rem, var.$text_color, normal, bold);
-      font-family: Arial, Helvetica, sans-serif;
+      font-family: "Open Sans", sans-serif;
     }
     &_bloc {
       @include mixin.figure(var.$width * 3.8, var.$height * 0.2, white);

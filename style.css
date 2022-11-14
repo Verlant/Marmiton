@@ -1,3 +1,4 @@
+@import url("https://fonts.cdnfonts.com/css/open-sans");
 .container {
   width: 380px;
   height: 450px;
@@ -58,7 +59,7 @@
   color: #3f3735;
   font-style: normal;
   font-weight: bold;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 .container .recette_bloc {
   width: 380px;
